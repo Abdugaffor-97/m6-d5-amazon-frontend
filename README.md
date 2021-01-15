@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+Market Place / Amazon Like + MongoDB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Upgrade your previously created API using a MongoDB Database.
+//---------------------------------------------------------
+START FROM PREVIOUS VERSION OF AMAZON / MARKETPLACE API!
+//---------------------------------------------------------
 
-## Available Scripts
+Every product in your marketplace has this information:
+{
+"name": "app test 1", //REQUIRED
+"description": "somthing longer", //REQUIRED
+"brand": "nokia", //REQUIRED
+"imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
+"price": 100, //REQUIRED
+"category": "smartphones"
+"createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED (take a look at Mongoose docs to get how this can be automatically generated)
+"updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+}
 
-In the project directory, you can run:
+And the reviews looks like:
 
-### `npm start`
+{
+"comment": "A good book but definitely I don't like many parts of the plot", //REQUIRED
+"rate": 3, //REQUIRED, max 5
+"createdAt": "2019-08-01T12:46:45.895Z" // SERVER GENERATED
+},
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+//DATABASE
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Create the necessary collections. Is up to you to choose how many collections are needed to handle Products, Reviews, Shopping Cart[EXTRA]
 
-### `npm test`
+//BACKEND
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You are in charge of building the Backend using NodeJS + Express + Mongoose.
+You are going to study how is the better choice of design for the APIs for handling CRUD for products and reviews
+Extra method for product's image upload (POST /products/{id}/upload)
 
-### `npm run build`
+    Add the possibility to filter Products and paginate Products
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    [EXTRA] Create the required endpoints for Shopping cart
+    //NOTE:
+    for GET methods, add PAGINATION in order to get X elements at a time
+    //FRONTEND
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Create some filters (like checkboxes, toggles, switches, ...) to obtain a filtered list of Products from the db. Add backend pagination
+    Check from the frontend if everything is still working ;)
