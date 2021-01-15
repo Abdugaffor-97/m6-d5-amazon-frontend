@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Carausel from "../components/Carousel";
-import CategoryCart from "../components/CategoryCart";
+import Carausel from "../../components/Carousel";
+import CategoryCart from "../../components/CategoryCart";
 
 const categories = [
   {
@@ -31,9 +31,8 @@ class Home extends Component {
   render() {
     return (
       <div style={{ minHeight: "90vh" }}>
-        <Carausel />
-
         <Container>
+          <Carausel />
           <div>
             <Row>
               {categories.map((category, idx) => (

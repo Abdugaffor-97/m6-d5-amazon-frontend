@@ -13,6 +13,9 @@ const NavBar = () => {
         <Nav.Link as={Link} to="/">
           Home
         </Nav.Link>
+        <Nav.Link as={Link} to="productlist">
+          Product List
+        </Nav.Link>
         <Nav.Link as={Link} to="add-product">
           Add product
         </Nav.Link>
