@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Container, Row, Spinner, Alert } from "react-bootstrap";
+import { Container, Row, Spinner, Alert, Col } from "react-bootstrap";
+import SingleProduct from "../../components/SingleProduct";
 
 class ProductList extends Component {
   state = {
@@ -10,11 +11,14 @@ class ProductList extends Component {
 
   fetchProduct = async () => {
     const API_URL = process.env.REACT_APP_BE_URL + "/products";
+    console.log(API_URL);
 
     try {
       const res = await fetch(API_URL);
+
       if (res.ok) {
         const products = await res.json();
+        console.log(products);
         this.setState({ products: products, loading: false });
       }
     } catch (error) {
@@ -30,7 +34,7 @@ class ProductList extends Component {
     const { loading, error, products } = this.state;
     return (
       <Container>
-        <Row>
+        <Row md={3} lg={4}>
           {loading && <Spinner animation="border" variant="success" />}
 
           {error && (
@@ -38,7 +42,9 @@ class ProductList extends Component {
           )}
           {products &&
             products.map((product, idx) => (
-              <div>{JSON.stringify(product)}</div>
+              <Col key={idx}>
+                <SingleProduct product={product} />
+              </Col>
             ))}
         </Row>
       </Container>
