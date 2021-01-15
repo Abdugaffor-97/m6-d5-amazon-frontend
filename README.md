@@ -6,24 +6,24 @@ START FROM PREVIOUS VERSION OF AMAZON / MARKETPLACE API!
 //---------------------------------------------------------
 
 Every product in your marketplace has this information:
-{
-"name": "app test 1", //REQUIRED
-"description": "somthing longer", //REQUIRED
-"brand": "nokia", //REQUIRED
-"imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
-"price": 100, //REQUIRED
-"category": "smartphones"
-"createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED (take a look at Mongoose docs to get how this can be automatically generated)
-"updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
-}
+    {
+        "name": "app test 1", //REQUIRED
+        "description": "somthing longer", //REQUIRED
+        "brand": "nokia", //REQUIRED
+        "imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
+        "price": 100, //REQUIRED
+        "category": "smartphones"
+        "createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED (take a look at Mongoose docs to get how this can be automatically generated)
+        "updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+    }
 
 And the reviews looks like:
 
-{
-"comment": "A good book but definitely I don't like many parts of the plot", //REQUIRED
-"rate": 3, //REQUIRED, max 5
-"createdAt": "2019-08-01T12:46:45.895Z" // SERVER GENERATED
-},
+    {
+        "comment": "A good book but definitely I don't like many parts of the plot", //REQUIRED
+        "rate": 3, //REQUIRED, max 5
+        "createdAt": "2019-08-01T12:46:45.895Z" // SERVER GENERATED
+    }
 
 //DATABASE
 
