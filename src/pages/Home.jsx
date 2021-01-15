@@ -30,14 +30,14 @@ const categories = [
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div style={{ minHeight: "90vh" }}>
         <Carausel />
 
         <Container>
           <div>
-            <Row sm={1} md={2} lg={3} xl={4}>
+            <Row>
               {categories.map((category, idx) => (
-                <Col className="mx-2 my-4" key={idx}>
+                <Col key={idx}>
                   <CategoryCart category={category} />
                 </Col>
               ))}
