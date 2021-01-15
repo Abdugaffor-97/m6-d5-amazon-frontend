@@ -7,6 +7,7 @@ START FROM PREVIOUS VERSION OF AMAZON / MARKETPLACE API!
 
 Every product in your marketplace has this information:
     {
+    
         "name": "app test 1", //REQUIRED
         "description": "somthing longer", //REQUIRED
         "brand": "nokia", //REQUIRED
